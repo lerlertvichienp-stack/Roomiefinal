@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roomie</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&family=Mitr:wght@200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- โลโก้ -->
+  <header class="navbar">
+    <div class="logo">
+      <a href="#"> 
+        <img src="img/logo.png" alt="Roomie">
+        <span class="logo-text">R<span class="highlight">OO</span>MIE</span>
+      </a>
+    </div>
+<!-- แถบข้างบน -->
+    <nav class="nav-menu">
+      <a class="nav-link" href="#"data-i18n="nav_home">หน้าหลัก</a>
+      <a class="nav-link" href="#"data-i18n="nav_coupon">คูปองส่วนลด</a>
+      <a class="nav-link" href="#"data-i18n="nav_profile">ข้อมูลเกี่ยวกับฉัน</a>
+      <a class="nav-link" href="#"data-i18n="nav_contact">ติดต่อเรา</a>
+    </nav>
+ <!-- หัวใจกระดิ่ง -->
+    <div class="nav-actions">
+      <span class="material-symbols-outlined">favorite</span>
+      <span class="material-symbols-outlined">notifications</span>
+
+  <!-- ธงเปลี่ยนภาษา -->
+      <button class="lang-switch-btn" id="langBtn" onclick="toggleLanguage()">
+        <img id="flagImg" src="img/th.png" class="flag-icon" alt="TH Flag">
+        <span id="langText" class="lang-text">Th</span>
+      </button>
+
+  <!-- เข้าสู่ระบบ / ลงทะเบียน -->
+      <a href="#" class="login-link"data-i18n="login">เข้าสู่ระบบ</a>
+      <button class="btn-register"data-i18n="register">ลงทะเบียน</button>
+
+      <span class="material-symbols-outlined menu-toggle">menu</span>
+    </div>
+  </header>
+
+
+  <!-- homepage -->
+  
+<section class="hero-section">
+  <div class="hero-container">
+  <!-- กล่องค้นหา -->
+    <div class="search-bar">
+      <div class="search-input-group">
+        <span class="material-symbols-outlined search-icon">location_on</span>
+        <input type="text" placeholder="หอพักใกล้ฉัน" class="search-input"data-i18n-placeholder="search_placeholder" />
+      </div>
+      <button type="button" class="search-btn">
+        <span class="material-symbols-outlined">search</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-container">
+
+      <!--  (โลโก้  เบอร์โทร  ที่อยู่) -->
+      <div class="footer-col footer-col-left">
+        <div class="footer-logo">
+          <a href="#">
+            <img src="img/logo.png" class="logo-icon" alt="Roomie House">
+            <span class="logo-text">R<span class="highlight-o">OO</span>MIE</span>
+          </a>
+        </div>
+
+        <div class="contact-info">
+          <p><span data-i18n="tel_label">โทร :</span> 099-999-999</p>
+          <p><span data-i18n="line_label">Line :</span> @roomie</p>
+  <p><span data-i18n="email_label">Email :</span> goodie@roomie.in.th</p>
+        </div>
+
+        <div class="address-info">
+          <p data-i18n="company_name">บริษัท มีตังค์ มีเดีย จำกัด</p>
+  <p data-i18n="company_address_1">เลขที่ 111,111,111 อาคาร A3 ชั้น 3 ห้องเลขที่ 3933</p>
+  <p data-i18n="company_address_2">ถ.เพชรเกษม ต.คลองมะเดื่อ อ.กระทุ่มแบน จ.สมุทรสาคร 74110</p>
+        </div>
+      </div>
+<!-- เกี่ยวกับเรา -->
+<div class="footer-col-middle">
+  <h3 class="footer-title" data-i18n="footer_about">เกี่ยวกับเรา</h3>
+  <ul class="footer-links">
+    <li><a href="#" data-i18n="link_blog">Blog</a></li>
+    <li><a href="#" data-i18n="link_terms">ข้อตกลงในการลงประกาศ</a></li>
+    <li><a href="#" data-i18n="link_register_dorm">ลงทะเบียนที่พักกับ Roomie</a></li>
+    <li><a href="#" data-i18n="link_tos">Term of Service</a></li>
+    <li><a href="#" data-i18n="link_contact">Contact</a></li>
+  </ul>
+</div>
+
+<!--  ดาวน์โหลดแอป ติดตามเรา -->
+<div class="footer-col-right">
+  <div class="app-download">
+   <h3 class="footer-title" data-i18n="footer_download">ดาวน์โหลดแอปพลิเคชัน</h3>
+    <div class="app-badges">
+      <a href="#"><img src="img/appstore.png" alt="App Store"></a>
+      <a href="#"><img src="img/googleplay.png" alt="Google Play"></a>
+    </div>
+  </div>
+
+  <div class="social-section">
+    <h3 class="footer-title" data-i18n="footer_follow">ติดตามเรา</h3>
+    <div class="social-icons">
+      <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
+      <a href="#"><img src="img/ig.png" alt="Instagram"></a>
+      <a href="#"><img src="img/tiktok.png" alt="TikTok"></a>
+      <a href="#"><img src="img/x.png" alt="X"></a>
+    </div>
+  </div>
+</div>
+</div>
+</footer>
+
+  <script>
+    let currentLang = 'TH';
+const translations = {
+      TH: {
+        nav_home: "หน้าหลัก",
+        nav_coupon: "คูปองส่วนลด",
+        nav_profile: "ข้อมูลเกี่ยวกับฉัน",
+        nav_contact: "ติดต่อเรา",
+        login: "เข้าสู่ระบบ",
+        register: "ลงทะเบียน",
+        search_placeholder: "หอพักใกล้ฉัน",
+        tel_label: "โทร :",
+         line_label: "Line :",
+         email_label: "Email :",
+        company_name: "บริษัท มีตังค์ มีเดีย จำกัด",
+        company_address_1: "เลขที่ 111,111,111 อาคาร A3 ชั้น 3 ห้องเลขที่ 3933",
+        company_address_2: "ถ.เพชรเกษม ต.คลองมะเดื่อ อ.กระทุ่มแบน จ.สมุทรสาคร 74110",
+        footer_about: "เกี่ยวกับเรา",
+        link_blog: "Blog",
+        link_terms: "ข้อตกลงในการลงประกาศ",
+        link_register_dorm: "ลงทะเบียนที่พักกับ Roomie",
+        link_tos: "Term of Service",
+        link_contact: "Contact",
+        footer_download: "ดาวน์โหลดแอปพลิเคชัน",
+        footer_follow: "ติดตามเรา"
+      },
+      EN: {
+        nav_home: "Home",
+        nav_coupon: "Coupons",
+        nav_profile: "My Profile",
+        nav_contact: "Contact Us",
+        login: "Log in",
+        register: "Register",
+        search_placeholder: "Dormitories near me",
+        tel_label: "Tel :",
+        line_label: "Line :",
+    email_label: "Email :",
+        company_name: "Meetang Media Co., Ltd.",
+        company_address_1: "No. 111,111,111 Building A3, 3rd Floor, Room 3933",
+        company_address_2: "Phetkasem Rd., Khlong Maduea, Krathum Baen, Samut Sakhon 74110",
+        footer_about: "About Us",
+        link_blog: "Blog",
+        link_terms: "Posting Terms & Conditions",
+        link_register_dorm: "Register Accommodation with Roomie",
+        link_tos: "Terms of Service",
+        link_contact: "Contact",
+        footer_download: "Download Application",
+        footer_follow: "Follow Us"
+      }
+    };
+    function toggleLanguage() {
+      const flagImg = document.getElementById('flagImg');
+      const langText = document.getElementById('langText');
+
+      if (currentLang === 'TH') {
+        currentLang = 'EN';
+        flagImg.src = 'img/en.webp'; 
+        flagImg.alt = 'EN Flag';
+        langText.textContent = 'En';
+      } else {
+        currentLang = 'TH';
+        flagImg.src = 'img/th.png';  
+        flagImg.alt = 'TH Flag';
+        langText.textContent = 'Th';
+      }
+// เปลี่ยนข้อความตาม attribute data-i18n
+      document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        if (translations[currentLang][key]) {
+          element.textContent = translations[currentLang][key];
+        }
+      });
+
+      // เปลี่ยนข้อความใน Placeholder ของช่องค้นหา
+      document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+        const key = element.getAttribute('data-i18n-placeholder');
+        if (translations[currentLang][key]) {
+          element.placeholder = translations[currentLang][key];
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
