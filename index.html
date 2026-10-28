@@ -48,23 +48,245 @@
     </div>
   </header>
 
+<!-- apt page -->
 
-  <!-- homepage -->
-  
-<section class="hero-section">
-  <div class="hero-container">
-  <!-- กล่องค้นหา -->
-    <div class="search-bar">
-      <div class="search-input-group">
-        <span class="material-symbols-outlined search-icon">location_on</span>
-        <input type="text" placeholder="หอพักใกล้ฉัน" class="search-input"data-i18n-placeholder="search_placeholder" />
+<section class="dorm-search-section">
+  <div class="dorm-search-container">
+    
+    <!-- หาหอพัก -->
+    <div class="section-header">
+      <div class="title-with-icon">
+        <span class="material-symbols-outlined back-icon">chevron_left</span>
+        <h2 data-i18n="section_dorm_title">หาหอพัก</h2>
       </div>
-      <button type="button" class="search-btn">
-        <span class="material-symbols-outlined">search</span>
-      </button>
+      <p class="subtitle" data-i18n="section_dorm_subtitle">หอพักที่รอคุณเข้าพัก รวมกันไว้ที่นี่แล้ว!</p>
     </div>
+
+<!-- ปุ่ม 3 ปุ่ม (Service Menu) -->
+<div class="service-menu-container">
+  <a href="#" class="service-btn">
+    <span class="material-symbols-outlined icon">domain</span>
+    <span data-i18n="cat_dorm">หอพัก อะพาร์ตเมนต์ คอนโด</span>
+  </a>
+
+  <a href="#" class="service-btn">
+    <span class="material-symbols-outlined icon">person_search</span>
+    <span data-i18n="cat_roommate">ค้นหารูมเมท</span>
+  </a>
+
+  <a href="#" class="service-btn">
+    <span class="material-symbols-outlined icon">add_circle</span>
+    <span data-i18n="cat_sublease">ปล่อยสัญญาเช่า</span>
+  </a>
+</div>
+
+<!-- แถบค้นหา (Dorm Search Bar) -->
+<div class="dorm-search-bar">
+  <div class="search-input-wrapper">
+    <span class="material-symbols-outlined search-icon">location_on</span>
+    <input type="text" placeholder="หอพักใกล้ฉัน" class="search-input" data-i18n-placeholder="search_placeholder" />
+  </div>
+  <button type="button" class="search-btn">
+    <span class="material-symbols-outlined">search</span>
+  </button>
+</div>
+
   </div>
 </section>
+
+<!-- สิ่งที่สนใจ -->
+<section class="amenities-section">
+  <div class="amenities-container">
+    
+    <!-- ลวดลายตกแต่งวงกลมด้านบน -->
+    <div class="circles-decor">
+  <div class="hole-item"><span class="pin"></span><span class="hole"></span></div>
+  <div class="hole-item"><span class="pin"></span><span class="hole"></span></div>
+  <div class="hole-item"><span class="pin"></span><span class="hole"></span></div>
+  <div class="hole-item"><span class="pin"></span><span class="hole"></span></div>
+  <div class="hole-item"><span class="pin"></span><span class="hole"></span></div>
+  <div class="hole-item"><span class="pin"></span><span class="hole"></span></div>
+  <div class="hole-item"><span class="pin"></span><span class="hole"></span></div>
+  <div class="hole-item"><span class="pin"></span><span class="hole"></span></div>
+  <div class="hole-item"><span class="pin"></span><span class="hole"></span></div>
+  <div class="hole-item"><span class="pin"></span><span class="hole"></span></div>
+</div>
+
+    <!-- หัวข้อ -->
+    <h2 class="amenities-title" data-i18n="filter_title">เลือกสิ่งที่คุณสนใจ</h2>
+
+    <!-- รายการปุ่ม Filter (2 แถว) -->
+    <div class="filter-grid">
+  <button type="button" class="filter-chip"><span data-i18n="filter_wifi">Wi-Fi</span></button>
+  <button type="button" class="filter-chip"><span data-i18n="filter_tv">TV</span></button>
+  <button type="button" class="filter-chip"><span data-i18n="filter_kitchen">ห้องครัว</span></button>
+  <button type="button" class="filter-chip"><span data-i18n="filter_ac">เครื่องปรับอากาศ</span></button>
+  <button type="button" class="filter-chip"><span data-i18n="filter_parking">ที่จอดรถ</span></button>
+  <button type="button" class="filter-chip"><span data-i18n="filter_gym">ฟิตเนต</span></button>
+  <button type="button" class="filter-chip"><span data-i18n="filter_fridge">ตู้เย็น</span></button>
+  <button type="button" class="filter-chip"><span data-i18n="filter_pool">สระว่ายน้ำ</span></button>
+  <button type="button" class="filter-chip"><span data-i18n="filter_dryer">เครื่องอบผ้า</span></button>
+  <button type="button" class="filter-chip"><span data-i18n="filter_soundproof">เก็บเสียง</span></button>
+  <button type="button" class="filter-chip"><span data-i18n="filter_washer">เครื่องซักผ้า</span></button>
+  <button type="button" class="filter-chip"><span data-i18n="filter_pets">เลี้ยงสัตว์</span></button>
+</div>
+
+  </div>
+</section>
+
+<!-- หอพักที่ยังมีห้องว่าง -->
+<section class="available-dorms-section">
+  <div class="available-dorms-container">
+    <h2 class="section-title" data-i18n="section_available_title">หอพักที่ยังมีห้องว่าง</h2>
+
+    <!-- Grid การ์ดหอพัก  -->
+    <div class="dorms-grid">
+      
+<!-- Card 1 -->
+<div class="dorm-card">
+  <div class="dorm-img-wrapper">
+    <img src="img/gem1.webp" alt="GEMS-PARK">
+  </div>
+  <div class="dorm-info">
+    <h3 class="dorm-name">GEMS-PARK</h3>
+    <p class="dorm-address">
+      <span class="material-symbols-outlined icon">location_on</span>
+      <span data-i18n="dorm1_addr">ซ.คลองหลวง 5 (พัฒนาเจริญรุ่ง 2) 48/221 ซ.คลองหลวง 5 ถ.พหลโยธิน ต.คลองหนึ่ง อ.คลองหลวง ปทุมธานี</span>
+    </p>
+    <p class="dorm-details" data-i18n="dorm1_detail">1 ห้องนอน , 1 เตียงนอน , 1 ห้องน้ำ</p>
+    <div class="dorm-price">
+      <span class="price-num">4,900</span> <span class="price-unit" data-i18n="month_unit">/ เดือน</span>
+    </div>
+    <a href="#" class="btn-detail" data-i18n="btn_view_details">ดูรายละเอียด</a>
+  </div>
+</div>
+
+<!-- Card 2 -->
+<div class="dorm-card">
+  <div class="dorm-img-wrapper">
+    <img src="img/penguin.jpg" alt="Penguin151">
+  </div>
+  <div class="dorm-info">
+    <h3 class="dorm-name">Penguin151</h3>
+    <p class="dorm-address">
+      <span class="material-symbols-outlined icon">location_on</span>
+      <span data-i18n="dorm2_addr">151 ซ.11 ถ.เทศา ต.พระปฐมเจดีย์ อ.เมืองนครปฐม นครปฐม</span>
+    </p>
+    <p class="dorm-details" data-i18n="dorm2_detail">1 ห้องนอน , 1 ห้องครัว , 1 ห้องน้ำ</p>
+    <div class="dorm-price">
+      <span class="price-num">3,900</span> <span class="price-unit" data-i18n="month_unit">/ เดือน</span>
+    </div>
+    <a href="#" class="btn-detail" data-i18n="btn_view_details">ดูรายละเอียด</a>
+  </div>
+</div>
+
+<!-- Card 3 -->
+<div class="dorm-card">
+  <div class="dorm-img-wrapper">
+    <img src="img/kjs.png" alt="K.J.S. Mansion">
+  </div>
+  <div class="dorm-info">
+    <h3 class="dorm-name">K.J.S. Mansion</h3>
+    <p class="dorm-address">
+      <span class="material-symbols-outlined icon">location_on</span>
+      <span data-i18n="dorm3_addr">ซ.หมอเหล็ง ถ.ราชปรารภ แขวงมักกะสัน ราชเทวี กรุงเทพมหานคร</span>
+    </p>
+    <p class="dorm-details" data-i18n="dorm3_detail">1 ห้องนอน , 1 เตียงนอน , 1 ห้องน้ำ</p>
+    <div class="dorm-price">
+      <span class="price-num">6,500</span> <span class="price-unit" data-i18n="month_unit">/ เดือน</span>
+    </div>
+    <a href="#" class="btn-detail" data-i18n="btn_view_details">ดูรายละเอียด</a>
+  </div>
+</div>
+
+<!-- Card 4 -->
+<div class="dorm-card">
+  <div class="dorm-img-wrapper">
+    <img src="img/uthong.webp" alt="Uthong Mansion">
+  </div>
+  <div class="dorm-info">
+    <h3 class="dorm-name">Uthong Mansion</h3>
+    <p class="dorm-address">
+      <span class="material-symbols-outlined icon">location_on</span>
+      <span data-i18n="dorm4_addr">ซ.ลาดพร้าว 122 ถ.ลาดพร้าว วังทองหลาง วังทองหลาง กรุงเทพมหานคร</span>
+    </p>
+    <p class="dorm-details" data-i18n="dorm4_detail">1 ห้องนอน , 1 เตียงนอน , 1 ห้องน้ำ</p>
+    <div class="dorm-price">
+      <span class="price-num">4,200</span> <span class="price-unit" data-i18n="month_unit">/ เดือน</span>
+    </div>
+    <a href="#" class="btn-detail" data-i18n="btn_view_details">ดูรายละเอียด</a>
+  </div>
+</div>
+
+<!-- Card 5 -->
+<div class="dorm-card hide-on-ipad">
+  <div class="dorm-img-wrapper">
+    <img src="img/vip.webp" alt="VIP MANSION">
+  </div>
+  <div class="dorm-info">
+    <h3 class="dorm-name">VIP MANSION</h3>
+    <p class="dorm-address">
+      <span class="material-symbols-outlined icon">location_on</span>
+      <span data-i18n="dorm5_addr">ซ.พหลโยธิน 57 แยก 4 / แจ้งวัฒนะ 4 ถ.พหลโยธิน อนุสาวรีย์ บางเขน กรุงเทพมหานคร</span>
+    </p>
+    <p class="dorm-details" data-i18n="dorm5_detail">1 ห้องนอน , 2 เตียงนอน , 1 ห้องน้ำ</p>
+    <div class="dorm-price">
+      <span class="price-num">4,000</span> <span class="price-unit" data-i18n="month_unit">/ เดือน</span>
+    </div>
+    <a href="#" class="btn-detail" data-i18n="btn_view_details">ดูรายละเอียด</a>
+  </div>
+</div>
+
+<!-- Card 6 -->
+<div class="dorm-card hide-on-ipad">
+  <div class="dorm-img-wrapper">
+    <img src="img/gem2.webp" alt="GEMS-PARK">
+  </div>
+  <div class="dorm-info">
+    <h3 class="dorm-name">GEMS-PARK</h3>
+    <p class="dorm-address">
+      <span class="material-symbols-outlined icon">location_on</span>
+      <span data-i18n="dorm6_addr">ซ.พหลโยธิน 59 ถ.พหลโยธิน อนุสาวรีย์ บางเขน กรุงเทพมหานคร</span>
+    </p>
+    <p class="dorm-details" data-i18n="dorm6_detail">1 ห้องนอน , 1 เตียงนอน , 1 ห้องน้ำ</p>
+    <div class="dorm-price">
+      <span class="price-num">4,900</span> <span class="price-unit" data-i18n="month_unit">/ เดือน</span>
+    </div>
+    <a href="#" class="btn-detail" data-i18n="btn_view_details">ดูรายละเอียด</a>
+  </div>
+</div>
+    </div>
+
+    <!-- ปุ่มมุมขวาล่าง ดูทั้งหมด -->
+    <div class="view-all-wrapper">
+      <a href="#" class="btn-view-all">
+        <span data-i18n="btn_view_all">ดูทั้งหมด</span>
+        <span class="material-symbols-outlined">arrow_forward</span>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   <!-- FOOTER -->
   <footer class="site-footer">
@@ -137,6 +359,42 @@ const translations = {
         login: "เข้าสู่ระบบ",
         register: "ลงทะเบียน",
         search_placeholder: "หอพักใกล้ฉัน",
+        section_dorm_title: "หาหอพัก",
+        section_dorm_subtitle: "หอพักที่รอคุณเข้าพัก รวมกันไว้ที่นี่แล้ว!",
+        cat_dorm: "หอพัก อพาร์ทเมนท์ คอนโด",
+      cat_roommate: "ค้นหารูมเมท",
+      cat_sublease: "ปล่อยสัญญาเช่า",
+        filter_title: "เลือกสิ่งที่คุณสนใจ",
+       filter_wifi: "Wi-Fi",
+        filter_tv: "TV",
+        filter_kitchen: "ห้องครัว",
+        filter_ac: "เครื่องปรับอากาศ",
+        filter_parking: "ที่จอดรถ",
+        filter_gym: "ฟิตเนต",
+        filter_fridge: "ตู้เย็น",
+        filter_pool: "สระว่ายน้ำ",
+        filter_dryer: "เครื่องอบผ้า",
+        filter_soundproof: "เก็บเสียง",
+        filter_washer: "เครื่องซักผ้า",
+        filter_pets: "เลี้ยงสัตว์",
+        month_unit: "/ เดือน",
+        dorm1_addr: "ซ.คลองหลวง 5 (พัฒนาเจริญรุ่ง 2) 48/221 ซ.คลองหลวง 5 ถ.พหลโยธิน ต.คลองหนึ่ง อ.คลองหลวง ปทุมธานี",
+        dorm1_detail: "1 ห้องนอน , 1 เตียงนอน , 1 ห้องน้ำ",
+        dorm2_addr: "151 ซ.11 ถ.เทศา ต.พระปฐมเจดีย์ อ.เมืองนครปฐม นครปฐม",
+        dorm2_detail: "1 ห้องนอน , 1 ห้องครัว , 1 ห้องน้ำ",
+        dorm3_addr: "ซ.หมอเหล็ง ถ.ราชปรารภ แขวงมักกะสัน ราชเทวี กรุงเทพมหานคร",
+        dorm3_detail: "1 ห้องนอน , 1 เตียงนอน , 1 ห้องน้ำ",
+        dorm4_addr: "ซ.ลาดพร้าว 122 ถ.ลาดพร้าว วังทองหลาง วังทองหลาง กรุงเทพมหานคร",
+        dorm4_detail: "1 ห้องนอน , 1 เตียงนอน , 1 ห้องน้ำ",
+        dorm5_addr: "ซ.พหลโยธิน 57 แยก 4 / แจ้งวัฒนะ 4 ถ.พหลโยธิน อนุสาวรีย์ บางเขน กรุงเทพมหานคร",
+        dorm5_detail: "1 ห้องนอน , 2 เตียงนอน , 1 ห้องน้ำ",
+        dorm6_addr: "ซ.พหลโยธิน 59 ถ.พหลโยธิน อนุสาวรีย์ บางเขน กรุงเทพมหานคร",
+        dorm6_detail: "1 ห้องนอน , 1 เตียงนอน , 1 ห้องน้ำ",
+
+
+        section_available_title: "หอพักที่ยังมีห้องว่าง",
+        btn_view_details: "ดูรายละเอียด",
+        btn_view_all: "ดูทั้งหมด",
         tel_label: "โทร :",
          line_label: "Line :",
          email_label: "Email :",
@@ -160,9 +418,46 @@ const translations = {
         login: "Log in",
         register: "Register",
         search_placeholder: "Dormitories near me",
+        section_dorm_title: "Find Accommodation",
+        section_dorm_subtitle: "Dormitories waiting for you are all collected here!",
+        cat_dorm: "Dorm, Apartment, Condo",
+      cat_roommate: "Find Roommate",
+       cat_sublease: "Sublease / Transfer",
+        filter_title: "Select Amenities You're Interested In",
+        filter_wifi: "Wi-Fi",
+        filter_tv: "TV",
+         filter_kitchen: "Kitchen",
+        filter_ac: "Air conditioner",                  
+         filter_parking: "Parking",
+        filter_gym: "Gym",
+        filter_fridge: "Fridge",          
+        filter_pool: "Pool",              
+        filter_dryer: "Dryer",           
+        filter_soundproof: "Soundproof",
+        filter_washer: "Washer",          
+        filter_pets: "Pet Friendly",
+        month_unit: "/ Month",
+        dorm1_addr: "Soi Khlong Luang 5 (Phatthana Charoen Rung 2) 48/221 Soi Khlong Luang 5, Phahonyothin Rd., Khlong Nueng, Khlong Luang, Pathum Thani",
+        dorm1_detail: "1 Bedroom , 1 Bed , 1 Bathroom",
+        dorm2_addr: "151 Soi 11, Tesa Rd., Phra Pathommachedi, Mueang Nakhon Pathom, Nakhon Pathom",
+        dorm2_detail: "1 Bedroom , 1 Kitchen , 1 Bathroom",
+        dorm3_addr: "Soi Mo Leng, Ratchaprarop Rd., Makkasan, Ratchathewi, Bangkok",
+        dorm3_detail: "1 Bedroom , 1 Bed , 1 Bathroom",
+        dorm4_addr: "Soi Lat Phrao 122, Lat Phrao Rd., Wang Thonglang, Wang Thonglang, Bangkok",
+        dorm4_detail: "1 Bedroom , 1 Bed , 1 Bathroom",
+        dorm5_addr: "Soi Phahonyothin 57 Yaek 4 / Chaeng Watthana 4, Phahonyothin Rd., Anusawari, Bang Khen, Bangkok",
+        dorm5_detail: "1 Bedroom , 2 Beds , 1 Bathroom",
+        dorm6_addr: "Soi Phahonyothin 59, Phahonyothin Rd., Anusawari, Bang Khen, Bangkok",
+      dorm6_detail: "1 Bedroom , 1 Bed , 1 Bathroom",
+
+
+
+        section_available_title: "Available Accommodation",
+    btn_view_details: "View Details",
+    btn_view_all: "View All",
         tel_label: "Tel :",
         line_label: "Line :",
-    email_label: "Email :",
+        email_label: "Email :",
         company_name: "Meetang Media Co., Ltd.",
         company_address_1: "No. 111,111,111 Building A3, 3rd Floor, Room 3933",
         company_address_2: "Phetkasem Rd., Khlong Maduea, Krathum Baen, Samut Sakhon 74110",
@@ -207,6 +502,15 @@ const translations = {
         }
       });
     }
+    document.addEventListener('DOMContentLoaded', () => {
+    const filterChips = document.querySelectorAll('.filter-chip');
+
+    filterChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        chip.classList.toggle('active');
+      });
+    });
+  });
   </script>
 
 </body>

@@ -1,10 +1,33 @@
+/* ===================================================
+   1. GLOBAL & DESKTOP STYLES
+   =================================================== */
+
 body {
   font-family: 'Poppins', 'Mitr';
   margin: 0;
   padding: 0;
 }
 
-/* พื้นหลัง */
+/* บังคับไอคอน Material Symbols ให้แสดงผลเป็นรูปภาพเสมอ */
+.material-symbols-outlined,
+.material-symbols-outlined.icon,
+.dorm-search-section .material-symbols-outlined {
+  font-family: 'Material Symbols Outlined' ;
+  font-weight: normal ;
+  font-style: normal ;
+  line-height: 1 ;
+  letter-spacing: normal ;
+  text-transform: none ;
+  display: inline-block ;
+  white-space: nowrapimportant;
+  word-wrap: normal ;
+  direction: ltr ;
+  -webkit-font-smoothing: antialiased ;
+  color: #3A2316;
+  user-select: none;
+}
+
+/* --- HEADER / NAVBAR --- */
 .navbar {
   display: flex;
   align-items: center;
@@ -13,19 +36,19 @@ body {
   padding: 20px 60px;
   background-color: #ffffff;
 }
-/* โลโก้บ้านแถบบน */
+
 .logo a {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-decoration: none;
 }
-/* รูปบ้าน */
+
 .logo img {
   height: 43px;
   display: block;
 }
-/* คำว่ารูมมี่ */
+
 .logo span {
   font-family: 'Poppins';
   font-size: 24px;
@@ -33,12 +56,11 @@ body {
   color: #bad08e;
   line-height: 1;
 }
-/* ตัวoo */
+
 .logo-text .highlight {
   color: #feedaa;
 }
 
-/* แถบ4อัน */
 .nav-menu {
   display: flex;
   align-items: center;
@@ -63,16 +85,6 @@ body {
   gap: 20px;
 }
 
-/* กระดิ่ง หัวใจ */
-.material-symbols-outlined {
-  font-size: 35px;
-  color: #3A2316;
-  cursor: pointer;
-  user-select: none;
-  transition: color 0.2s;
-}
-
-/* ธงเปลี่ยนภาษา */
 .lang-switch-btn {
   position: relative;
   display: inline-flex;
@@ -84,7 +96,7 @@ body {
   cursor: pointer;
   outline: none;
 }
-/* ขนาดธง */
+
 .flag-icon {
   width: 58px;
   height: 34px;
@@ -92,7 +104,7 @@ body {
   object-fit: cover;
   display: block;
 }
-/* ฟอนต์ในธง */
+
 .lang-text {
   position: absolute;
   font-family: 'Poppins';
@@ -103,7 +115,6 @@ body {
   user-select: none;
 }
 
-/* เข้าสู่ระบบ  */
 .login-link {
   font-family: 'Mitr';
   text-decoration: none;
@@ -112,7 +123,7 @@ body {
   font-size: 20px;
   margin-left: 4px;
 }
-/* ลงทะเบียน */
+
 .btn-register {
   font-family: 'Mitr';
   text-decoration: none;
@@ -133,144 +144,470 @@ body {
   transition: background-color 0.2s;
 }
 
-/* ซ่อนไอคอน Hamburger บน Desktop */
 .menu-toggle {
   display: none;
 }
 
-/* homepage */
-.hero-section {
+/* --- DORM SEARCH SECTION --- */
+.dorm-search-section {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 20px;
+  padding: 30px 20px;
   box-sizing: border-box;
 }
 
-.hero-container {
+.dorm-search-container {
   width: 100%;
-  max-width: 1280px;      
-  height: 482px;          
-  border-radius: 30px;    
-  position: relative;
-  overflow: hidden;
+  max-width: 1278px;
   display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  box-sizing: border-box;
-
-  background-image: url('../img/banner.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: #E2EBC8;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.hero-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
+.dorm-search-section .section-header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dorm-search-section .title-with-icon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dorm-search-section .back-icon {
+  font-size: 36px ;
+  color: #000000;
+  cursor: pointer;
+  margin-left: -8px;
+}
+
+.dorm-search-section h2 {
+  font-family: 'Mitr';
+  font-size: 40px;
+  font-weight: 500;
+  color: #000000;
+  margin: 0;
+}
+
+.dorm-search-section .subtitle {
+  font-family: 'Mitr';
+  font-size: 24px;
+  font-weight: 300;
+  color: #000000;
+  margin: 0;
+  padding-left: 36px; 
+}
+
+/* SERVICE MENU  */
+.service-menu-container {
+  display: flex;
+  gap: 20px;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
+  max-width: 1278px;
+  margin: 0 auto;
 }
 
-.search-bar {
-  position: relative;
-  z-index: 2;
-  width: 90%;
-  max-width: 1100px;
-  height: 64px;
+.service-btn {
+  flex: 1;
+  height: 90px;
+  background-color: #C6D8A2;
+  border-radius: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #3A2316;
+  font-family: 'Mitr';
+  font-size: 24px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+  padding: 0 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.service-btn .icon {
+  font-size: 38px ;
+  color: #3A2316;
+  flex-shrink: 0;
+}
+
+.service-btn span {
+  font-family: 'Mitr';
+  color: #3A2316;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.service-btn:hover {
+  background-color: #caef7f;
+  transform: translateY(-2px);
+}
+
+/* SEARCH BAR (DESKTOP) */
+.dorm-search-bar {
+  width: 100%;
+  max-width: 1149px; 
+  height: 87px;      
+  margin: 0 auto;    
   background-color: #ffffff;
-  border-radius: 40px;
+  border: 1px solid #4C4C4C; 
+  border-radius: 60px;       
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 6px 8px 6px 24px;
-  margin-bottom: 24px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  padding: 10px 30px;        
+  gap: 14px;                 
   box-sizing: border-box;
 }
 
-.search-input-group {
+.search-input-wrapper {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;                 
   width: 100%;
 }
 
-.search-icon {
+.search-input-wrapper .search-icon {
   color: #3A2316;
-  font-size: 24px;
+  font-size: 28px ;
+  flex-shrink: 0;
 }
 
-.search-input {
+.search-input-wrapper .search-input {
   border: none;
   outline: none;
-  font-family: 'Mitr', sans-serif;
-  font-size: 18px;
+  font-family: 'Mitr';
+  font-weight: 400;
+  font-size: 24px;
   color: #000000;
   width: 100%;
   background: transparent;
 }
 
-.search-btn {
+.dorm-search-bar .search-btn {
   background-color: #BAD08E;
   border: none;
-  width: 100px;
-  height: 50px;
-  border-radius: 25px;
+  width: 149px;
+  height: 67px;
+  border-radius: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   flex-shrink: 0;
+  transition: background-color 0.2s;
 }
 
-.search-btn .material-symbols-outlined {
+.dorm-search-bar .search-btn:hover {
+  background-color: #acc37f;
+}
+
+.dorm-search-bar .search-btn .material-symbols-outlined {
   color: #3A2316;
-  font-size: 26px;
+  font-size: 28px ;
 }
 
-/* ===================================================
-   HERO BANNER RESPONSIVE (MOBILE & TABLET)
-   =================================================== */
-@media screen and (max-width: 768px) {
-  .hero-container {
-    height: 280px;         /* ย่อความสูงแบนเนอร์บนมือถือ */
-    border-radius: 20px;
-  }
-
-  .search-bar {
-    height: 48px;
-    padding: 4px 6px 4px 16px;
-    margin-bottom: 16px;
-  }
-
-  .search-input {
-    font-size: 14px;
-  }
-
-  .search-btn {
-    width: 60px;
-    height: 38px;
-    border-radius: 20px;
-  }
-
-  .search-btn .material-symbols-outlined {
-    font-size: 20px;
-  }
+/* --- AMENITIES / POST-IT SECTION --- */
+.amenities-section {
+  width: 100%;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  padding: 30px 20px;
+  box-sizing: border-box;
 }
 
+.amenities-container {
+  width: 100%;
+  max-width: 1278px;
+  min-height: 459px;
+  margin: 0 auto;           
+  background-color: #F5FCDF;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;     
+  justify-content: center;
+  padding: 90px 40px 40px 40px;
+  box-sizing: border-box;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
 
-/* ส่วน footer */
+.circles-decor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1278px;
+  height: 89px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 35px;
+  box-sizing: border-box;
+  pointer-events: none;
+  z-index: 2;
+}
 
+.hole-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 44px;
+}
 
-/* พื้นหลังfooter */
+.hole-item .pin {
+  width: 29px;
+  height: 40px;
+  background-color: #ffffff;
+}
+
+.hole-item .hole {
+  width: 88px;
+  height: 89px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  margin-top: -2px;
+}
+
+.amenities-title {
+  font-family: 'Mitr';
+  font-weight: 400;
+  font-size: 40px;
+  color: #000000;
+  margin: 0 0 50px 0;
+  text-align: center;
+  z-index: 1;
+}
+
+.filter-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px 16px;
+  width: 100%;
+  max-width: 1180px;
+  z-index: 1;
+}
+
+.filter-chip {
+  height: 51px;
+  background-color: #ffffff;      
+  border: none;
+  border-radius: 27px;            
+  font-family: 'Mitr';
+  font-weight: 500;
+  font-size: 24px;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.342);
+  transition: all 0.2s ease;
+  padding: 0 16px;
+  white-space: nowrap;
+}
+
+.filter-chip.active {
+  background-color: #CAEF7E;     
+  color: #000000;
+  box-shadow: 0 4px 12px rgba(136, 173, 62, 1);
+}
+
+.filter-chip:hover {
+  transform: translateY(-2px);
+}
+
+/* --- AVAILABLE DORMS SECTION --- */
+.available-dorms-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.available-dorms-container {
+  width: 100%;
+  max-width: 1279px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.available-dorms-section .section-title {
+  font-family: 'Mitr';
+  font-weight: 500;
+  font-size: 48px;
+  color: #000000;
+  margin: 0;
+}
+
+.dorms-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+.dorm-card {
+  width: 100%;
+  max-width: 413px;
+  min-height: 640px;
+  background: linear-gradient(180deg, #FBF0CC 0%, #FFFDF1 100%);
+  border: 1px solid #EDEDED;
+  border-radius: 20px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-sizing: border-box;
+}
+
+.dorm-img-wrapper {
+  width: 100%;
+  height: 288px; 
+  border-radius: 20px;
+  overflow: hidden;
+  flex-shrink: 0;         
+}
+
+.dorm-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;      
+  display: block;
+}
+
+.dorm-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.dorm-name {
+  font-family: 'Mitr';
+  font-weight: 600;
+  font-size: 36px;
+  color: #6D3A29;
+  margin: 0;
+}
+
+.dorm-address {
+  font-family: 'Mitr';
+  font-size: 20px;          
+  font-weight: 300;         
+  color: #766A64;          
+  margin: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+  line-height: 1.2;         
+  min-height: 72px;        
+  height: auto;            
+  overflow: visible;        
+}
+
+.dorm-address .icon {
+  font-size: 24px;         
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.dorm-details {
+  font-family: 'Mitr';
+  font-size: 20px;
+  font-weight: 300;
+  color: #766A64;
+  margin: 0;
+}
+
+.dorm-price {
+  font-family: 'Mitr';
+  color: #6D3A29;
+  margin-top: 4px;
+}
+
+.dorm-price .price-num,
+.dorm-price .price-unit {
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.btn-detail {
+  width: 195px;
+  height: 53px;
+  background-color: #ffffff;
+  border: 1px solid #838383;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Mitr';
+  font-size: 20px;
+  font-weight: 300;
+  color: #000000;
+  text-decoration: none;
+  margin-top: 6px;
+  margin-left: auto;      
+  align-self: flex-end;    
+  transition: all 0.2s ease;
+}
+
+.btn-detail:hover {
+  background-color: #bad08e;
+  color: #ffffff;
+  border-color: #d9d9d9;
+}
+
+.view-all-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.btn-view-all {
+  width: 199px;
+  height: 45px;
+  background-color: #BAD08E;  
+  border-radius: 50px;        
+  padding: 0 27px;             
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;                   
+  font-family: 'Mitr';
+  font-weight: 300;            
+  font-size: 20px;             
+  color: #1E1E1E;              
+  text-decoration: none;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+.btn-view-all .material-symbols-outlined {
+  font-size: 24px;
+  color: #1E1E1E;
+}
+
+.btn-view-all:hover {
+  background-color: #acc37f;   
+  transform: translateY(-2px);
+}
+
+/* --- FOOTER --- */
 .site-footer {
   width: 100%;
-  background-color: #FFFEE9 ;
+  background-color: #FFFEE9;
   display: flex;
   justify-content: center;
   padding: 50px 0;
@@ -282,21 +619,21 @@ body {
   max-width: 1444px;
   margin: 0 auto;
   padding: 0 60px;
-  display: flex ;
-  flex-direction: row ;
-  justify-content: space-between ;
-  align-items: center ;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   box-sizing: border-box;
 }
 
 .footer-col-left {
-  display: flex ;
-  flex-direction: column ;
-  align-items: flex-start ;
-  gap: 16px ;
-  padding: 0 ;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 0;
 }
-/* โลโก้footer */
+
 .footer-logo {
   display: flex;
   flex-direction: column;
@@ -314,10 +651,10 @@ body {
 
 .footer-logo img,
 .footer-logo .logo-icon {
-  width: 65px ; 
-  max-width: 65px ;
-  height: auto ;
-  display: block ;
+  width: 65px; 
+  max-width: 65px;
+  height: auto;
+  display: block;
   margin-bottom: 2px;
 }
 
@@ -336,10 +673,10 @@ body {
 
 .contact-info,
 .address-info {
-  display: flex ;
-  flex-direction: column ;
-  align-items: flex-start ;
-  gap: 4px ;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
 }
 
 .contact-info p {
@@ -363,7 +700,7 @@ body {
   color: #000000;
   margin: 0;
 }
-/* คำว่าเกี่ยวกับเรา/ดาวน์โหลดแอป/ติดตามเรา */
+
 .footer-title {
   font-family: 'Mitr';
   font-weight: 500;
@@ -374,8 +711,8 @@ body {
 }
 
 .footer-col-middle {
-  display: flex ;
-  flex-direction: column ;
+  display: flex;
+  flex-direction: column;
   gap: 12px;
 }
 
@@ -387,9 +724,9 @@ body {
   flex-direction: column;
   gap: 8px;
 }
-/* เกี่ยวกับเรา */
+
 .footer-links a {
-  font-family: 'Mitr', ;
+  font-family: 'Mitr';
   font-weight: 300;
   font-size: 18px;
   color: #000000;
@@ -397,250 +734,517 @@ body {
 }
 
 .footer-col-right {
-  display: flex ;
-  flex-direction: column ;
+  display: flex;
+  flex-direction: column;
   gap: 20px;
   min-width: 220px;
 }
 
 .app-badges {
-  display: flex ;
-  flex-direction: column ;
+  display: flex;
+  flex-direction: column;
   gap: 10px;
 }
-/* appstore googleplay */
+
 .app-badges img {
-  width: 170px ;
-  height: auto ;
-  display: block ;
+  width: 170px;
+  height: auto;
+  display: block;
 }
-/* ไอคอนแอป4อะนfooter */
+
 .social-icons {
-  display: flex ;
-  flex-direction: row ;
-  gap: 10px ;
-  align-items: center ;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
 }
 
 .social-icons img {
-  width: 49px ;
-  height: 49px ;
-  display: block ;
+  width: 49px;
+  height: 49px;
+  display: block;
   object-fit: contain;
 }
 
 
 /* ===================================================
-    IPAD / TABLET 
+   2. IPAD SPECIFIC ( 769px <= screen <= 1180px )
    =================================================== */
-@media screen and (max-width: 1180px) {
-
-  .navbar {
-    padding: 12px 24px ;
-    justify-content: space-between ;
+@media screen and (min-width: 769px) and (max-width: 1180px) {
+  .available-dorms-container {
+    width: 100% ;
+    max-width: 714px ; /* ล็อกความกว้างเท่ากับส่วนค้นหาด้านบน */
+    margin: 0 auto ;
+    display: flex ;
+    flex-direction: column ;
+    align-items: center ;
   }
 
-  /* ซ่อนเมนูข้อความ 4 อัน */
-  .nav-menu {
+  .available-dorms-section .section-title {
+    width: 100% ;
+    text-align: left ;
+  }
+
+  /* แสดงผลการ์ด 2 คอลัมน์ วางกึ่งกลางสมบูรณ์ */
+  .dorms-grid {
+    display: grid ;
+    grid-template-columns: repeat(2, 1fr) ;
+    gap: 20px ;
+    width: 100% ;
+    justify-content: center ;
+  }
+
+  .dorm-card {
+    max-width: 345px ; /* ปรับขนาดการ์ดให้พอดีกับกรอบ 714px */
+    margin: 0 auto ;
+  }
+
+  /* บังคับซ่อนการ์ดที่ 5 และ 6 บน iPad */
+  .dorms-grid .dorm-card.hide-on-ipad,
+  .dorm-card.hide-on-ipad {
     display: none ;
   }
 
-  /* แสดงไอคอน Hamburger */
+
+  .navbar {
+    padding: 12px 24px;
+    justify-content: space-between;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+
   .menu-toggle {
     display: inline-block ;
     font-size: 28px ;
-    color: #000000 ;
+    color: #000000;
     cursor: pointer;
   }
 
   .navbar .logo img {
-    height: 40px ;
+    height: 40px;
   }
 
   .navbar .logo span {
-    font-size: 18px ;
+    font-size: 18px;
   }
 
   .login-link {
-    font-size: 16px ;
+    font-size: 16px;
   }
 
   .btn-register {
-    width: 100px ;
-    height: 36px ;
-    font-size: 16px ;
-    padding: 0 ;
+    width: 100px;
+    height: 36px;
+    font-size: 16px;
+    padding: 0;
   }
 
   .nav-actions {
+    gap: 12px;
+  }
+
+  /* --- SERVICE MENU BUTTONS (IPAD: เรียงแนวนอน 3 ปุ่ม) --- */
+  .service-menu-container {
+    width: 100% ;
+    max-width: 714px ;
+    height: 75px ;
+    margin: 0 auto ;
+    display: flex ;
+    flex-direction: row ;
+    justify-content: space-between ;
+    align-items: center ;
     gap: 12px ;
+  }
+
+  .service-btn {
+    flex: 1 1 0% ;
+    width: auto ;
+    height: 75px ;
+    background-color: #C6D8A2 ;
+    border-radius: 40px ;
+    padding: 0 10px ;
+    display: flex ;
+    align-items: center ;
+    justify-content: center ;
+    gap: 6px ;
+    box-sizing: border-box ;
+  }
+
+  .service-btn .icon {
+    font-size: 24px ;
+    color: #3A2316 ;
+  }
+
+  .service-btn span {
+    font-family: 'Mitr';
+    font-weight: 400 ;
+    font-size: 13.5px ;
+    color: #3A2316 ;
+    white-space: nowrap ;
+  }
+
+  /* --- SEARCH BAR (IPAD) --- */
+  .dorm-search-bar {
+    width: 100% ;
+    max-width: 714px ;
+    height: 75px ;
+    margin: 16px auto 0 auto ;
+    background: #FFFFFF ;
+    border: 2px solid #3A2316 ;
+    border-radius: 50px ;
+    padding: 8px 10px 8px 24px ;
+  }
+
+  .search-input-wrapper .search-icon {
+    font-size: 32px ;
+  }
+
+  .search-input-wrapper .search-input {
+    font-size: 20px ;
+  }
+
+  .dorm-search-bar .search-btn {
+    width: 110px ;
+    height: 55px ;
+  }
+
+  .dorm-search-bar .search-btn .material-symbols-outlined {
+    font-size: 30px ;
+  }
+
+  /* --- AMENITIES POST-IT & FILTER GRID (IPAD: 4 คอลัมน์) --- */
+  .amenities-container {
+    max-width: 714px ;
+    padding: 80px 20px 30px 20px ;
+  }
+
+  .filter-grid {
+    display: grid ;
+    grid-template-columns: repeat(4, 1fr) ; /* 4 คอลัมน์ */
+    gap: 16px 12px ;
+    width: 100% ;
+    max-width: 630px ;
+    margin: 0 auto ;
+  }
+
+  .filter-chip {
+    width: 100% ;
+    max-width: 146px ;
+    height: 51px ;
+    border-radius: 20px ;
+    font-size: 18px ;
+    box-shadow: 0 4px 4px rgba(136, 173, 62, 0.4) ;
+  }
+
+  .dorms-grid {
+    grid-template-columns: repeat(2, 1fr) ;
   }
 }
 
 
+
+
+  /* ===================================================
+   3. MOBILE SPECIFIC ( screen <= 768px )
+   =================================================== */
 /* ===================================================
-   โทรศัพท์
+   3. MOBILE SPECIFIC ( screen <= 768px )
    =================================================== */
 @media screen and (max-width: 768px) {
 
-  /* --- HEADER --- */
+  /* --- HEADER MOBILE --- */
   .navbar {
-    padding: 10px 16px ;
-    justify-content: space-between ;
+    padding: 12px 16px;
+    justify-content: space-between;
   }
 
-  /* แถบข้างบน */
   .nav-menu,
   .login-link,
   .btn-register,
   .nav-actions > .material-symbols-outlined:not(.menu-toggle) {
-    display: none ;
+    display: none !important;
   }
 
   .navbar .logo img {
-    height: 32px ;
+    height: 32px;
   }
 
   .navbar .logo span {
-    font-size: 16px ;
+    font-size: 16px;
   }
 
   .nav-actions {
-    display: flex ;
-    align-items: center ;
-    gap: 12px ;
-    margin-left: auto ;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: auto;
   }
 
   .menu-toggle {
-    display: inline-block ;
-    font-size: 26px ;
-    color: #000000 ;
+    display: inline-block !important;
+    font-size: 26px !important;
+    color: #000000;
+  }
+
+  /* --- SEARCH & SERVICE SECTION --- */
+  .dorm-search-section {
+    padding: 16px;
+  }
+
+  .dorm-search-section h2 {
+    font-size: 28px;
+  }
+
+  .dorm-search-section .subtitle {
+    font-size: 15px;
+    padding-left: 28px;
+  }
+
+  /* ปุ่มบริการ 3 ปุ่ม (ย่อฟอนต์และไอคอนให้สวยพอดีตาม FIGMA) */
+  .service-menu-container {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    width: 100% !important;
+  }
+
+  .service-btn {
+    width: 100% !important;
+    height: 48px !important;
+    border-radius: 24px !important;
+    padding: 0 16px !important;
+    justify-content: center !important;
+    gap: 8px !important;
+  }
+
+  .service-btn .icon {
+    font-size: 20px !important;
+  }
+
+  .service-btn span {
+    font-size: 13.5px !important; /* ปรับย่อขนาดฟอนต์ปุ่มบริการ */
+    font-weight: 400 !important;
+  }
+
+  /* แถบค้นหา Mobile */
+  .dorm-search-bar {
+    width: 100% !important;
+    height: 52px !important;
+    padding: 4px 6px 4px 16px !important;
+    border: 1.5px solid #3A2316 !important;
+    border-radius: 30px !important;
+    margin-top: 12px !important;
+  }
+
+  .search-input-wrapper .search-icon {
+    font-size: 20px !important;
+  }
+
+  .search-input-wrapper .search-input {
+    font-size: 14px !important;
+  }
+
+  .dorm-search-bar .search-btn {
+    width: 60px !important;
+    height: 40px !important;
+    border-radius: 20px !important;
+  }
+
+  .dorm-search-bar .search-btn .material-symbols-outlined {
+    font-size: 20px !important;
+  }
+
+  /* --- AMENITIES POST-IT & CIRCLES DECOR (MOBILE: บังคับซ่อนเหลือ 6 อัน) --- */
+  .amenities-container .circles-decor {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 45px !important;
+    padding: 0 12px !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    left: 0 !important;
+    right: 0 !important;
+  }
+
+  /* แสดงเฉพาะวงกลม 6 อันแรก */
+  .amenities-container .circles-decor .hole-item:nth-child(1),
+  .amenities-container .circles-decor .hole-item:nth-child(2),
+  .amenities-container .circles-decor .hole-item:nth-child(3),
+  .amenities-container .circles-decor .hole-item:nth-child(4),
+  .amenities-container .circles-decor .hole-item:nth-child(5),
+  .amenities-container .circles-decor .hole-item:nth-child(6) {
+    display: flex !important;
+  }
+
+  /* บังคับซ่อนวงกลมที่ 7 ถึง 10 บน Mobile เด็ดขาด */
+  .amenities-container .circles-decor .hole-item:nth-child(n+7) {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .amenities-container .hole-item {
+    width: 28px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .amenities-container .hole-item .pin {
+    width: 16px !important;
+    height: 18px !important;
+  }
+
+  .amenities-container .hole-item .hole {
+    width: 36px !important;
+    height: 36px !important;
+    margin-top: -1px !important;
+  }
+
+  .circles-decor {
+    width: 100% !important;
+    height: 45px !important;
+    padding: 0 10px !important;
+  }
+
+  .hole-item {
+    width: 20px !important;
+  }
+
+  .hole-item .pin {
+    width: 14px !important;
+    height: 20px !important;
+  }
+
+  .hole-item .hole {
+    width: 38px !important;  /* ย่อขนาดวงกลมขาวให้เล็กลงพอดีหน้าจอ */
+    height: 38px !important;
+    margin-top: -1px !important;
+  }
+
+  .amenities-title {
+    font-size: 20px !important;
+    margin: 10px 0 20px 0 !important;
+  }
+
+  /* --- FILTER GRID (2 คอลัมน์) --- */
+  .filter-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px 8px !important;
+    width: 100% !important;
+  }
+
+  .filter-chip {
+    width: 100% !important;
+    height: 42px !important;
+    border-radius: 14px !important;
+    font-size: 13.5px !important;
+    padding: 0 6px !important;
+  }
+
+  /* --- AVAILABLE DORMS GRID (แสดงเฉพาะ 3 ที่พักแรก) --- */
+  .available-dorms-section {
+    padding: 24px 16px;
+  }
+
+  .available-dorms-section .section-title {
+    font-size: 26px;
+  }
+
+  .dorms-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+    width: 100% !important;
+  }
+
+  .dorm-card {
+    max-width: 100% !important;
+    min-height: auto !important;
+    padding: 16px !important;
+  }
+
+  /* โชว์เฉพาะ 3 การ์ดแรกบน Mobile */
+  .dorms-grid .dorm-card:nth-child(-n+3) {
+    display: flex !important;
+  }
+
+  .dorms-grid .dorm-card:nth-child(n+4) {
+    display: none !important;
+  }
+
+  .dorm-name {
+    font-size: 26px;
+  }
+
+  .dorm-address, .dorm-details {
+    font-size: 15px;
+  }
+
+  .dorm-price .price-num, .dorm-price .price-unit {
+    font-size: 26px;
   }
 
   /* --- FOOTER MOBILE --- */
   .site-footer {
-    width: 100% ;
-    background-color: #FFFEE9 ;
-    display: block ;
-    padding: 24px 0 ;
-    box-sizing: border-box ;
+    padding: 24px 0;
   }
 
   .footer-container {
-    width: 100% ;
-    max-width: 100% ;
-    padding: 0 16px ;
-    box-sizing: border-box ;
-    display: flex ;
-    flex-wrap: wrap ;
-    flex-direction: row ;
-    justify-content: space-between ;
-    align-items: flex-start ;
-    gap: 20px 0 ;
+    padding: 0 16px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px 0;
   }
 
   .footer-col-left {
-    width: 100% ;
-    flex: 0 0 100% ;
-    display: flex ;
-    flex-direction: column ;
-    align-items: flex-start ;
-    gap: 12px ;
-    padding: 0 ;
-    margin: 0 ;
+    width: 100%;
+    flex: 0 0 100%;
+    gap: 12px;
   }
 
   .footer-logo img,
   .footer-logo .logo-icon {
-    width: 32px ;
-    max-width: 32px ;
-    height: auto ;
+    width: 32px;
   }
 
   .footer-logo .logo-text {
-    font-size: 22px ;
-  }
-
-  .contact-info, .address-info {
-    width: 100% ;
-    display: flex ;
-    flex-direction: column ;
-    gap: 4px ;
+    font-size: 22px;
   }
 
   .contact-info p {
-    font-size: 14px ;
-    line-height: 1.3 ;
-  }
-
-  .address-info {
-    margin-top: 8px ;
+    font-size: 14px;
   }
 
   .address-info p {
-    font-size: 11px ;
-    line-height: 1.4 ;
+    font-size: 11px;
   }
 
-  .footer-col-middle {
-    width: 48% ;
-    flex: 0 0 48% ;
-    display: flex ;
-    flex-direction: column ;
-    gap: 8px ;
-    padding: 0 ;
-    margin: 0 ;
-  }
-
+  .footer-col-middle,
   .footer-col-right {
-    width: 48% ;
-    flex: 0 0 48% ;
-    display: flex ;
-    flex-direction: column ;
-    gap: 16px ;
-    padding: 0 ;
-    margin: 0 ;
-    min-width: unset ;
+    width: 48%;
+    flex: 0 0 48%;
+    min-width: unset;
   }
 
   .footer-title {
-    font-size: 14px ;
-    margin: 0 0 4px 0 ;
-  }
-
-  .footer-links {
-    padding: 0 ;
-    margin: 0 ;
-    display: flex ;
-    flex-direction: column ;
-    gap: 4px ;
+    font-size: 14px;
   }
 
   .footer-links a {
-    font-size: 12px ;
-  }
-
-  .app-badges {
-    display: flex ;
-    flex-direction: column ;
-    gap: 6px ;
+    font-size: 12px;
   }
 
   .app-badges img {
-    width: 105px ;
-    height: auto ;
-  }
-
-  .social-icons {
-    display: flex ;
-    flex-direction: row ;
-    gap: 6px ;
-    align-items: center ;
+    width: 105px;
   }
 
   .social-icons img {
-    width: 24px ;
-    height: 24px ;
+    width: 24px;
+    height: 24px;
   }
 }
